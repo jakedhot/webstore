@@ -1,0 +1,88 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block banner-slider %}
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/banner/d1.jpg'%}" class="d-block w-100" alt="banner image">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endblock banner-slider %}
+{% block information %}
+<div class="container">
+<div class="row bg-success text-center p-5 text-white border-bottom shadow">
+    <h1>Ground Coffee Powder</h1>
+    <small class="fs-5">We offer a small range of coffee products. Roasted Coffee Beans with different backgrounds from the different farms we sourced from.</small>
+</div>
+</div>
+{% endblock information %}
+{% block main-content %}
+<div class="container"> 
+    <h2 class="text-center">Click products below for more info!</h2>
+    <br></br>
+    <div class="row container">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s animation-name: none;">
+            <div class="goodnesssec buttermilk smbg">
+                <a href="{% url 'category' 'AR' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'app/images/product/coffebeans.jpg' %}" class="img-responsive center-block" alt="">
+                        <p class="mlkpro">Arabica</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s animation-name: none;">
+            <div class="goodnesssec buttermilk curdbgpro">
+                <a href="{% url 'category' 'CV' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'app/images/product/coffebeans.jpg' %}" class="img-responsive center-block" alt="">
+                        <p class="mlkpro">Civet</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s animation-name: none;">
+            <div class="goodnesssec buttermilk buttermilk">
+                <a href="{% url 'category' 'RO' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'app/images/product/coffebeans.jpg' %}" class="img-responsive center-block" alt="">
+                        <p class="mlkpro">Robusta</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s animation-name: none;">
+          <div class="goodnesssec buttermilk buttermilk">
+              <a href="{% url 'category' 'BA' %}">
+                  <div class="goodnessseccont text-center">
+                      <img src="{% static 'app/images/product/coffebeans.jpg' %}" class="img-responsive center-block" alt="">
+                      <p class="mlkpro">Barako</p>
+                  </div>
+              </a>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"       style="animation-duration: 1s; animation-delay: 0.6s animation-name: none;">
+        <div class="goodnesssec buttermilk buttermilk">
+            <a href="{% url 'category' 'MO' %}">
+                <div class="goodnessseccont text-center">
+                    <img src="{% static 'app/images/product/coffebeans.jpg' %}" class="img-responsive center-block" alt="">
+                    <p class="mlkpro">Mocha</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>
+</div>
+<br></br>
+{% endblock main-content %}
